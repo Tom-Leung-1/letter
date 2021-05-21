@@ -1,7 +1,7 @@
 export const MenuItems = [ // export so other file can access || const map array item to store menu items
     {
         title: 'Home',
-        url: "#", // url
+        url: "/home", // url
         cName: 'nav-links' // class name so you don't have to manually type it 
     },
     {
@@ -16,7 +16,7 @@ export const MenuItems = [ // export so other file can access || const map array
     },
     {
         title: 'Contact Us',
-        url: "#",
+        url: "/contact",
         cName: 'nav-links'
     },
     {
