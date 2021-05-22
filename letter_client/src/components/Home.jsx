@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import "../App.css";
 import "./Home.scss";
+import Axios from "axios";
+
 class Home extends Component {
     state = {
         message: "",
@@ -36,6 +38,14 @@ class Home extends Component {
         else {
             this.setState({nameError, messageError});
             document.body.classList.add("sent");
+            Axios.post("http://localhost:3001/home/postLetter", {
+                name: this.state.name,
+                content: this.state.message,
+            }).then(()=> {
+                alert("Letter has been received successfully");
+            }).catch((err) => {
+                console.log(err);
+            });
         } 
     }
 
