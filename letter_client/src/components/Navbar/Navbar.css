@@ -134,7 +134,7 @@
     transition: 250ms;
   }
 
-  Button {
+  Button:not(#sendLetter) {
     display: none;
   }
 }
