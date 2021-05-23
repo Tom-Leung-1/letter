@@ -6,6 +6,7 @@ const config = require("../config/config.json");
 
 const db = mysql.createPool({
     host: config.host,
+    port: 3306,
     user: config.user,
     password: config.password,
     database: config.database,
