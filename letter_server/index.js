@@ -3,6 +3,7 @@ const app = express()
 const mysql = require('mysql2')
 const config = require("./config/config.json");
 const home = require("./routes/home")
+const letters = require("./routes/letters")
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: false}))
@@ -12,6 +13,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.use("/home", home);
+app.use("/letters", letters);
 //use the home.js file for url beginning with /home
 
 const db = mysql.createPool({

@@ -56,7 +56,7 @@ class Home extends Component {
                 <div class="wrapper centered">
                     <article class="letter">
                         <div class="side">
-                            <h1>Write an anonymous email!</h1>
+                            <h1>Write an anonymous letter!</h1>
                             <p>
                                 <textarea placeholder="Message" value={this.state.message} 
                                 onChange={this.handleChange}
@@ -80,6 +80,10 @@ class Home extends Component {
                 <p class="result-message centered">Thank you for your message</p>
             </div>
         )
+    }
+
+    componentDidMount() {
+        document.body.classList.remove("sent");
     }
 }
 
