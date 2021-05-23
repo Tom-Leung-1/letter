@@ -38,7 +38,7 @@ class Home extends Component {
         else {
             this.setState({nameError, messageError});
             document.body.classList.add("sent");
-            Axios.post("http://localhost:3001/home/postLetter", {
+            Axios.post("http://3.142.12.24:3001/home/postLetter", {
                 name: this.state.name,
                 content: this.state.message,
             }).then(()=> {
