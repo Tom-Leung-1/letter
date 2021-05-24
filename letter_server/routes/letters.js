@@ -13,11 +13,11 @@ const db = mysql.createPool({
 })
 
 router.route("/").get((req, res) => {
-    console.log("getting a random letter")
+    // console.log("getting a random letter")
     const sqlSelect = "Select * from letters ORDER BY RAND() LIMIT 1"
     db.query(sqlSelect, (err, result)=> {
-        console.log(err)
-        console.log(result)
+        // console.log(err)
+        // console.log(result)
         res.json(result)
     })
 });
