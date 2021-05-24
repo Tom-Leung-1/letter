@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import "../App.css";
 import "./Home.scss";
 import Axios from "axios";
-var host = "3.142.12.24"
+var host = "3.133.121.145"
 
 class Home extends Component {
     state = {

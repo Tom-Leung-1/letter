@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from "axios";
 import "./Home.scss";
-var host = "3.142.12.24" // change it if needed
+var host = "3.133.121.145" // change it if needed
 class Letters extends Component {
     constructor(props) {
         super(props);
