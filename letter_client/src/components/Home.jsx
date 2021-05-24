@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import "../App.css";
 import "./Home.scss";
 import Axios from "axios";
+var host = "3.142.12.24"
 
 class Home extends Component {
     state = {
@@ -38,7 +39,7 @@ class Home extends Component {
         else {
             this.setState({nameError, messageError});
             document.body.classList.add("sent");
-            Axios.post("http://3.142.12.24:3001/home/postLetter", {
+            Axios.post("http://" + host + ":3001/home/postLetter", {
                 name: this.state.name,
                 content: this.state.message,
             }).then(()=> {
@@ -52,7 +53,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <small>Enter message (optional) and click button "Send"</small>
+                <small>Enter message and click button "Send"</small>
                 <div class="wrapper centered">
                     <article class="letter">
                         <div class="side">
